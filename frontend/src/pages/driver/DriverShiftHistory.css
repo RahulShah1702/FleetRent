@@ -1,0 +1,493 @@
+.shift-history-page {
+    min-height: 100vh;
+    background: #f5f7fb;
+    padding: 35px 20px 50px;
+    box-sizing: border-box;
+}
+
+
+.shift-history-container {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+
+/* ============================================================
+   BACK
+   ============================================================ */
+
+.history-back-button {
+    border: none;
+    background: transparent;
+
+    padding: 8px 0;
+    margin-bottom: 22px;
+
+    color: #4b5563;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.history-back-button:hover {
+    color: #2563eb;
+}
+
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 20px;
+
+    margin-bottom: 25px;
+}
+
+
+.history-eyebrow {
+    margin: 0 0 5px;
+
+    color: #2563eb;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+
+.history-header h1 {
+    margin: 0;
+
+    color: #111827;
+
+    font-size: 30px;
+    font-weight: 700;
+}
+
+
+.history-header p {
+    margin: 8px 0 0;
+
+    color: #6b7280;
+
+    font-size: 15px;
+}
+
+
+.shift-count {
+    min-width: 75px;
+
+    padding: 12px 15px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+
+    color: #111827;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    text-align: center;
+}
+
+
+.shift-count span {
+    display: block;
+
+    margin-top: 2px;
+
+    color: #6b7280;
+
+    font-size: 12px;
+    font-weight: 500;
+}
+
+
+/* ============================================================
+   HISTORY LIST
+   ============================================================ */
+
+.history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+
+/* ============================================================
+   HISTORY CARD
+   ============================================================ */
+
+.history-card {
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+
+    padding: 24px;
+
+    box-shadow:
+        0 3px 12px
+        rgba(15, 23, 42, 0.04);
+}
+
+
+.history-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 20px;
+
+    padding-bottom: 19px;
+    margin-bottom: 20px;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+
+.history-date {
+    color: #6b7280;
+
+    font-size: 13px;
+}
+
+
+.history-card-header h2 {
+    margin: 5px 0 0;
+
+    color: #111827;
+
+    font-size: 18px;
+    font-weight: 650;
+}
+
+
+/* ============================================================
+   STATUS
+   ============================================================ */
+
+.history-status {
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+.status-completed {
+    background: #f0fdf4;
+    color: #15803d;
+    border: 1px solid #bbf7d0;
+}
+
+
+.status-progress {
+    background: #eff6ff;
+    color: #2563eb;
+    border: 1px solid #bfdbfe;
+}
+
+
+.status-default {
+    background: #f3f4f6;
+    color: #4b5563;
+    border: 1px solid #e5e7eb;
+}
+
+
+/* ============================================================
+   DETAILS
+   ============================================================ */
+
+.history-details {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    column-gap: 50px;
+    row-gap: 20px;
+}
+
+
+.history-details > div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+
+.history-details span {
+    color: #6b7280;
+
+    font-size: 13px;
+}
+
+
+.history-details strong {
+    color: #1f2937;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* ============================================================
+   EMPTY
+   ============================================================ */
+
+.history-empty {
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+
+    padding: 60px 25px;
+
+    text-align: center;
+}
+
+
+.history-empty-icon {
+    width: 58px;
+    height: 58px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eff6ff;
+
+    border-radius: 50%;
+
+    font-size: 24px;
+}
+
+
+.history-empty h2 {
+    margin: 0 0 8px;
+
+    color: #111827;
+
+    font-size: 20px;
+}
+
+
+.history-empty p {
+    margin: 0;
+
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+
+/* ============================================================
+   LOADING / ERROR
+   ============================================================ */
+
+.history-loading,
+.history-error {
+    padding: 70px 20px;
+
+    text-align: center;
+
+    font-size: 15px;
+}
+
+
+.history-loading {
+    color: #6b7280;
+}
+
+
+.history-error {
+    color: #b91c1c;
+
+    background: #fef2f2;
+
+    border: 1px solid #fecaca;
+    border-radius: 10px;
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 650px) {
+
+    .shift-history-page {
+        padding: 22px 14px 40px;
+    }
+
+
+    .history-header {
+        flex-direction: column;
+    }
+
+
+    .history-header h1 {
+        font-size: 26px;
+    }
+
+
+    .shift-count {
+        align-self: flex-start;
+    }
+
+
+    .history-card {
+        padding: 20px 17px;
+    }
+
+
+    .history-card-header {
+        flex-direction: column;
+    }
+
+
+    .history-details {
+        grid-template-columns: 1fr;
+
+        row-gap: 18px;
+    }
+}
+
+/* ============================================================
+   DRIVER SHIFT HISTORY — DARK THEME
+   ============================================================ */
+
+[data-theme="dark"] .shift-history-page {
+    background: var(--app-background, #0f172a);
+    color: var(--app-text, #f8fafc);
+}
+
+[data-theme="dark"] .history-back-button {
+    color: #cbd5e1;
+}
+
+[data-theme="dark"] .history-back-button:hover {
+    color: #60a5fa;
+}
+
+[data-theme="dark"] .history-eyebrow {
+    color: #60a5fa;
+}
+
+[data-theme="dark"] .history-header h1 {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .history-header p {
+    color: #cbd5e1;
+}
+
+/* Shift count */
+[data-theme="dark"] .shift-count {
+    background: var(--app-surface, #1e293b);
+    border-color: var(--app-border, #334155);
+    color: #ffffff;
+}
+
+[data-theme="dark"] .shift-count span {
+    color: #cbd5e1;
+}
+
+/* History cards */
+[data-theme="dark"] .history-card {
+    background: var(--app-surface, #1e293b);
+    border-color: var(--app-border, #334155);
+}
+
+[data-theme="dark"] .history-card-header {
+    border-color: var(--app-border, #334155);
+}
+
+[data-theme="dark"] .history-date {
+    color: #94a3b8;
+}
+
+[data-theme="dark"] .history-card-header h2 {
+    color: #ffffff;
+}
+
+/* Details */
+[data-theme="dark"] .history-details span {
+    color: #94a3b8;
+}
+
+[data-theme="dark"] .history-details strong {
+    color: #ffffff;
+}
+
+/* Status badges */
+[data-theme="dark"] .status-completed {
+    background: rgba(34, 197, 94, 0.12);
+    color: #86efac;
+    border-color: rgba(74, 222, 128, 0.30);
+}
+
+[data-theme="dark"] .status-progress {
+    background: rgba(37, 99, 235, 0.14);
+    color: #93c5fd;
+    border-color: rgba(96, 165, 250, 0.30);
+}
+
+[data-theme="dark"] .status-default {
+    background: rgba(148, 163, 184, 0.12);
+    color: #cbd5e1;
+    border-color: rgba(148, 163, 184, 0.30);
+}
+
+/* Empty state */
+[data-theme="dark"] .history-empty {
+    background: var(--app-surface, #1e293b);
+    border-color: var(--app-border, #334155);
+}
+
+[data-theme="dark"] .history-empty-icon {
+    background: rgba(37, 99, 235, 0.14);
+}
+
+[data-theme="dark"] .history-empty h2 {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .history-empty p {
+    color: #cbd5e1;
+}
+
+/* Loading */
+[data-theme="dark"] .history-loading {
+    color: #cbd5e1;
+}
+
+/* Error */
+[data-theme="dark"] .history-error {
+    background: rgba(239, 68, 68, 0.10);
+    border-color: rgba(248, 113, 113, 0.30);
+    color: #fca5a5;
+}

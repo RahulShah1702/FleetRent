@@ -1,0 +1,384 @@
+/* ============================================================
+   FLEETRENT DRIVER DASHBOARD
+   ============================================================ */
+
+.driver-dashboard {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--app-background);
+    color: var(--app-text);
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+/* HEADER */
+.driver-dashboard-header {
+    background: var(--app-surface);
+    border-bottom: 1px solid var(--app-border);
+    padding: 26px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+.dashboard-eyebrow {
+    margin: 0 0 5px;
+    color: var(--app-primary);
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.driver-dashboard-header h1 {
+    margin: 0;
+    color: var(--app-text);
+    font-size: clamp(26px, 3vw, 32px);
+    line-height: 1.2;
+    font-weight: 750;
+}
+
+.dashboard-welcome {
+    margin: 8px 0 0;
+    color: var(--app-text-secondary);
+    font-size: 15px;
+}
+
+.dashboard-welcome strong {
+    color: var(--app-text);
+}
+
+.dashboard-header-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.profile-button,
+.logout-button {
+    min-height: 44px;
+    padding: 10px 17px;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 650;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.profile-button {
+    border: 1px solid var(--app-primary);
+    background: transparent;
+    color: var(--app-primary);
+}
+
+.profile-button:hover {
+    background: color-mix(in srgb, var(--app-primary) 10%, transparent);
+}
+
+.logout-button {
+    border: 1px solid var(--app-border);
+    background: var(--app-surface);
+    color: var(--app-text-secondary);
+}
+
+.logout-button:hover {
+    background: #fef2f2;
+    border-color: #fecaca;
+    color: #b91c1c;
+}
+
+/* NOTIFICATION */
+.notification-bell-button {
+    width: 44px;
+    height: 44px;
+    flex: 0 0 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--app-border);
+    border-radius: 50%;
+    background: var(--app-surface);
+    color: var(--app-text);
+    font-size: 19px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.notification-bell-button:hover {
+    border-color: var(--app-primary);
+    background: var(--app-surface-secondary);
+    transform: translateY(-1px);
+}
+
+/* CONTENT */
+.driver-dashboard-content {
+    width: min(1100px, calc(100% - 48px));
+    margin: 0 auto;
+    padding: 42px 0 10px;
+    flex: 1;
+}
+
+.dashboard-section h2 {
+    margin: 0 0 18px;
+    color: var(--app-text);
+    font-size: 21px;
+    font-weight: 750;
+}
+
+/* QUICK ACCESS */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.dashboard-card {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    width: 100%;
+    min-height: 138px;
+    padding: 24px;
+    box-sizing: border-box;
+    border: 1px solid var(--app-border);
+    border-radius: 14px;
+    background: var(--app-surface);
+    color: var(--app-text);
+    text-align: left;
+    cursor: pointer;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-2px);
+    border-color: color-mix(in srgb, var(--app-primary) 45%, var(--app-border));
+    box-shadow: 0 10px 28px rgba(15, 23, 42, 0.09);
+}
+
+.dashboard-card:focus-visible,
+.profile-button:focus-visible,
+.logout-button:focus-visible,
+.notification-bell-button:focus-visible {
+    outline: 3px solid color-mix(in srgb, var(--app-primary) 30%, transparent);
+    outline-offset: 2px;
+}
+
+.dashboard-card-icon {
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 11px;
+    background: color-mix(in srgb, var(--app-primary) 11%, transparent);
+    color: var(--app-primary);
+    font-size: 21px;
+}
+
+.dashboard-card h3 {
+    margin: 2px 34px 7px 0;
+    color: var(--app-text);
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.dashboard-card p {
+    margin: 0;
+    max-width: 360px;
+    color: var(--app-text-secondary);
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+.card-arrow {
+    position: absolute;
+    right: 21px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--app-text-muted);
+    font-size: 21px;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.dashboard-card:hover .card-arrow {
+    color: var(--app-primary);
+    transform: translate(3px, -50%);
+}
+
+/* PROFILE SUMMARY */
+.profile-summary {
+    margin-top: 34px;
+    padding: 24px;
+    border: 1px solid var(--app-border);
+    border-radius: 14px;
+    background: var(--app-surface);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 22px;
+}
+
+.profile-summary h2 {
+    margin: 0 0 7px;
+    color: var(--app-text);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.profile-summary p {
+    margin: 0;
+    color: var(--app-text-secondary);
+    font-size: 14px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.profile-summary d {
+    color: var(--app-text-muted);
+}
+
+.profile-summary button {
+    flex-shrink: 0;
+    border: none;
+    border-radius: 9px;
+    background: var(--app-primary);
+    color: #fff;
+    padding: 11px 18px;
+    font-size: 14px;
+    font-weight: 650;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.profile-summary button:hover {
+    filter: brightness(0.94);
+    transform: translateY(-1px);
+}
+
+/* LOADING / ERROR */
+.dashboard-loading,
+.dashboard-error {
+    width: min(1100px, calc(100% - 48px));
+    margin: auto;
+    padding: 80px 0;
+    text-align: center;
+    color: var(--app-text-secondary);
+}
+
+.dashboard-error {
+    color: #dc2626;
+}
+
+.dashboard-back-button {
+    display: block;
+    margin: -45px auto 0;
+    border: 1px solid var(--app-border);
+    border-radius: 9px;
+    padding: 10px 17px;
+    background: var(--app-surface);
+    color: var(--app-text);
+    cursor: pointer;
+}
+
+/* DARK MODE */
+[data-theme="dark"] .logout-button:hover {
+    background: rgba(239, 68, 68, 0.12);
+    border-color: rgba(248, 113, 113, 0.35);
+    color: #fca5a5;
+}
+
+/* RESPONSIVE */
+@media (max-width: 850px) {
+    .driver-dashboard-header {
+        padding: 24px;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .driver-dashboard-header > div:first-child {
+        flex: 1 1 100%;
+    }
+
+    .notification-bell-button {
+        margin-left: auto;
+    }
+
+    .dashboard-header-actions {
+        flex: 1 1 100%;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 700px) {
+    .driver-dashboard-header {
+        padding: 22px 18px;
+    }
+
+    .driver-dashboard-content {
+        width: calc(100% - 32px);
+        padding: 30px 0 8px;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .dashboard-card {
+        min-height: 126px;
+        padding: 20px;
+    }
+
+    .dashboard-header-actions {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr auto;
+    }
+
+    .profile-button,
+    .logout-button {
+        width: 100%;
+    }
+
+    .profile-summary {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .profile-summary button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .driver-dashboard-header h1 {
+        font-size: 25px;
+    }
+
+    .dashboard-header-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .notification-bell-button {
+        align-self: flex-start;
+    }
+
+    .dashboard-card {
+        min-height: 118px;
+        padding: 18px;
+        gap: 13px;
+    }
+
+    .dashboard-card-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 19px;
+    }
+}
+

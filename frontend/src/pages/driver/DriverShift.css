@@ -1,0 +1,924 @@
+.driver-shift-page {
+    min-height: 100vh;
+    background: #f5f7fb;
+    padding: 32px;
+    color: #111827;
+}
+
+.shift-back-button {
+    border: none;
+    background: transparent;
+    padding: 0;
+    margin-bottom: 34px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #1f2937;
+    cursor: pointer;
+}
+
+.shift-back-button:hover {
+    color: #2563eb;
+}
+
+.shift-header {
+    margin-bottom: 28px;
+}
+
+.shift-eyebrow {
+    margin: 0 0 4px;
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.shift-header h1 {
+    margin: 0;
+    font-size: 36px;
+    color: #111827;
+}
+
+.shift-header p:last-child {
+    margin-top: 8px;
+    color: #64748b;
+    font-size: 17px;
+}
+
+.shift-success,
+.shift-error {
+    padding: 14px 16px;
+    border-radius: 10px;
+    margin-bottom: 22px;
+    font-size: 15px;
+}
+
+.shift-success {
+    background: #ecfdf5;
+    border: 1px solid #a7f3d0;
+    color: #047857;
+}
+
+.shift-error {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #dc2626;
+}
+
+.shift-card,
+.shift-empty-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    box-shadow: 0 4px 18px rgba(15, 23, 42, 0.05);
+}
+
+.shift-card {
+    padding: 34px;
+}
+
+.shift-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.shift-label {
+    margin: 0 0 4px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.shift-card-header h2 {
+    margin: 0;
+    font-size: 28px;
+    color: #111827;
+}
+
+.shift-status {
+    padding: 9px 16px;
+    border-radius: 999px;
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    color: #475569;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.shift-status.in-progress {
+    background: #eff6ff;
+    border-color: #bfdbfe;
+    color: #2563eb;
+}
+
+.shift-divider {
+    height: 1px;
+    background: #e2e8f0;
+    margin: 28px 0;
+}
+
+.shift-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px 60px;
+}
+
+.shift-details div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.shift-details span {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.shift-details strong {
+    color: #111827;
+    font-size: 16px;
+}
+
+.shift-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+}
+
+.start-shift-button,
+.end-shift-button {
+    border-radius: 10px;
+    padding: 12px 24px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.start-shift-button {
+    border: none;
+    background: #2563eb;
+    color: white;
+}
+
+.start-shift-button:hover {
+    background: #1d4ed8;
+}
+
+.end-shift-button {
+    border: 1px solid #fca5a5;
+    background: white;
+    color: #dc2626;
+}
+
+.end-shift-button:hover {
+    background: #fef2f2;
+}
+
+.start-shift-button:disabled,
+.end-shift-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.shift-empty-card {
+    padding: 70px 30px;
+    text-align: center;
+}
+
+.shift-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: #eff6ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+}
+
+.shift-empty-card h2 {
+    margin: 0 0 8px;
+}
+
+.shift-empty-card p {
+    margin: 0;
+    color: #64748b;
+}
+
+.shift-loading {
+    background: white;
+    border-radius: 14px;
+    padding: 40px;
+    text-align: center;
+    color: #64748b;
+}
+
+@media (max-width: 700px) {
+    .driver-shift-page {
+        padding: 20px;
+    }
+
+    .shift-card {
+        padding: 22px;
+    }
+
+    .shift-card-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .shift-details {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .shift-actions {
+        justify-content: stretch;
+    }
+
+    .start-shift-button,
+    .end-shift-button {
+        width: 100%;
+    }
+}
+
+/* ============================================================
+   TAKE TODAY OFF BUTTON
+============================================================ */
+
+.day-off-button {
+    padding: 11px 20px;
+    margin-left: 20px;
+    border: 1px solid #f0b429;
+    border-radius: 8px;
+    background: #fffaf0;
+    color: #a15c00;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.day-off-button:hover {
+    background: #fff3d6;
+    border-color: #d99a00;
+}
+
+.day-off-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ============================================================
+   TAKE TODAY OFF BUTTON
+============================================================ */
+
+.day-off-button {
+    margin-left: 12px;
+    padding: 12px 22px;
+
+    border: 1px solid #f59e0b;
+    border-radius: 8px;
+
+    background: #fff;
+    color: #b45309;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.day-off-button:hover {
+    background: #fff7ed;
+    border-color: #d97706;
+    color: #92400e;
+
+    transform: translateY(-1px);
+}
+
+.day-off-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+/* ============================================================
+   DAY OFF OVERLAY
+============================================================ */
+
+.day-off-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(15, 23, 42, 0.55);
+
+    backdrop-filter: blur(3px);
+}
+
+
+/* ============================================================
+   DAY OFF MODAL
+============================================================ */
+
+.day-off-modal {
+    width: 100%;
+    max-width: 440px;
+
+    padding: 28px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 20px 50px rgba(15, 23, 42, 0.18);
+
+    animation: dayOffModalIn 0.2s ease-out;
+}
+
+
+@keyframes dayOffModalIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(10px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+/* ============================================================
+   MODAL TITLE
+============================================================ */
+
+.day-off-modal h2 {
+    margin: 0 0 8px;
+
+    color: #111827;
+
+    font-size: 22px;
+    font-weight: 700;
+}
+
+
+.day-off-modal p {
+    margin: 0 0 24px;
+
+    color: #64748b;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* ============================================================
+   REASON LABEL
+============================================================ */
+
+.day-off-modal label {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-bottom: 24px;
+
+    color: #374151;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* ============================================================
+   REASON SELECT
+============================================================ */
+
+.day-off-modal select {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: #111827;
+
+    font-size: 14px;
+
+    outline: none;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.day-off-modal select:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+
+/* ============================================================
+   MODAL ACTIONS
+============================================================ */
+
+.day-off-actions {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+}
+
+
+/* ============================================================
+   CANCEL
+============================================================ */
+
+.day-off-actions button {
+    padding: 11px 18px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.day-off-actions button:first-child {
+    border: 1px solid #d1d5db;
+
+    background: #ffffff;
+
+    color: #374151;
+}
+
+
+.day-off-actions button:first-child:hover {
+    background: #f8fafc;
+}
+
+
+/* ============================================================
+   CONFIRM DAY OFF
+============================================================ */
+
+.confirm-day-off {
+    border: 1px solid #dc2626;
+
+    background: #dc2626;
+
+    color: #ffffff;
+}
+
+
+.confirm-day-off:hover {
+    background: #b91c1c;
+
+    border-color: #b91c1c;
+}
+
+
+.confirm-day-off:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 600px) {
+
+    .day-off-modal {
+        padding: 22px;
+
+        border-radius: 14px;
+    }
+
+    .day-off-actions {
+        flex-direction: column-reverse;
+    }
+
+    .day-off-actions button {
+        width: 100%;
+    }
+
+    .day-off-button {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+}
+
+/* ============================================================
+   CALL OWNER
+============================================================ */
+
+.call-owner-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+
+    margin-bottom: 24px;
+    padding: 14px 16px;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+
+    background: #f8fafc;
+}
+
+.call-owner-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.call-owner-text strong {
+    color: #1f2937;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.call-owner-text span {
+    color: #64748b;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.call-owner-button {
+    flex-shrink: 0;
+
+    padding: 9px 14px;
+
+    border: 1px solid #16a34a;
+    border-radius: 8px;
+
+    background: #ffffff;
+    color: #15803d;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.call-owner-button:hover {
+    background: #f0fdf4;
+    border-color: #15803d;
+    color: #166534;
+}
+
+.call-owner-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 600px) {
+
+    .call-owner-section {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .call-owner-button {
+        width: 100%;
+    }
+
+}
+/* ============================================================
+   FLEETRENT THEME POLISH — DRIVER SHIFT
+   ============================================================ */
+
+.driver-shift-page {
+    --shift-bg: var(--background, #f7f8fa);
+    --shift-surface: var(--card, #ffffff);
+    --shift-text: var(--foreground, #172033);
+    --shift-muted: var(--muted-foreground, #64748b);
+    --shift-border: var(--border, #e5e7eb);
+    --shift-accent: var(--primary, #2563eb);
+    --shift-shadow: 0 12px 32px rgba(15, 23, 42, 0.07);
+    min-height: 100vh;
+    box-sizing: border-box;
+    background: var(--shift-bg);
+    color: var(--shift-text);
+    padding: 36px clamp(18px, 4vw, 56px) 56px;
+    transition: background-color .2s ease, color .2s ease;
+}
+
+.shift-back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 28px;
+    color: var(--shift-muted);
+    transition: color .2s ease, transform .2s ease;
+}
+
+.shift-back-button:hover {
+    color: var(--shift-text);
+    transform: translateX(-2px);
+}
+
+.shift-header {
+    max-width: 1120px;
+    margin: 0 auto 30px;
+}
+
+.shift-eyebrow {
+    color: var(--shift-muted);
+    letter-spacing: .16em;
+    font-size: 11px;
+}
+
+.shift-header h1 {
+    color: var(--shift-text);
+    font-size: clamp(30px, 4vw, 40px);
+    letter-spacing: -.025em;
+}
+
+.shift-header p:last-child {
+    color: var(--shift-muted);
+    max-width: 620px;
+    line-height: 1.6;
+}
+
+.shift-success,
+.shift-error {
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.shift-card,
+.shift-empty-card {
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+    background: var(--shift-surface);
+    border-color: var(--shift-border);
+    box-shadow: var(--shift-shadow);
+    transition: background-color .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+.shift-card {
+    padding: clamp(22px, 4vw, 36px);
+}
+
+.shift-card-header {
+    gap: 18px;
+}
+
+.shift-label,
+.shift-details span {
+    color: var(--shift-muted);
+}
+
+.shift-card-header h2,
+.shift-empty-card h2 {
+    color: var(--shift-text);
+}
+
+.shift-details strong {
+    color: var(--shift-text);
+}
+
+.shift-divider {
+    background: var(--shift-border);
+}
+
+.shift-status {
+    border: 1px solid var(--shift-border);
+}
+
+.shift-actions button,
+.day-off-button {
+    transition: transform .18s ease, box-shadow .18s ease, opacity .18s ease;
+}
+
+.shift-actions button:hover,
+.day-off-button:hover {
+    transform: translateY(-1px);
+}
+
+.shift-empty-card {
+    padding: clamp(28px, 5vw, 52px);
+}
+
+.shift-empty-card p,
+.shift-loading {
+    color: var(--shift-muted);
+}
+
+.day-off-overlay {
+    backdrop-filter: blur(5px);
+    background: rgba(15, 23, 42, .58);
+}
+
+.day-off-modal {
+    background: var(--shift-surface);
+    color: var(--shift-text);
+    border: 1px solid var(--shift-border);
+    box-shadow: 0 24px 70px rgba(0, 0, 0, .2);
+}
+
+.day-off-modal h2,
+.day-off-modal label {
+    color: var(--shift-text);
+}
+
+.day-off-modal p {
+    color: var(--shift-muted);
+}
+
+.day-off-modal select {
+    background: var(--shift-surface);
+    color: var(--shift-text);
+    border-color: var(--shift-border);
+}
+
+@media (max-width: 700px) {
+    .driver-shift-page {
+        padding: 24px 16px 40px;
+    }
+
+    .shift-back-button {
+        margin-bottom: 22px;
+    }
+
+    .shift-header {
+        margin-bottom: 22px;
+    }
+
+    .shift-card-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+.dark .driver-shift-page,
+[data-theme="dark"] .driver-shift-page {
+    color: var(--shift-text);
+}
+
+/* Main headings and important values */
+.dark .driver-shift-page .shift-header h1,
+[data-theme="dark"] .driver-shift-page .shift-header h1,
+
+.dark .driver-shift-page .shift-card-header h2,
+[data-theme="dark"] .driver-shift-page .shift-card-header h2,
+
+.dark .driver-shift-page .shift-details strong,
+[data-theme="dark"] .driver-shift-page .shift-details strong {
+    color: #ffffff;
+}
+
+/* Date, labels and secondary information */
+.dark .driver-shift-page .shift-details span,
+[data-theme="dark"] .driver-shift-page .shift-details span,
+
+.dark .driver-shift-page .shift-label,
+[data-theme="dark"] .driver-shift-page .shift-label,
+
+.dark .driver-shift-page .shift-header p,
+[data-theme="dark"] .driver-shift-page .shift-header p {
+    color: #cbd5e1;
+}
+
+/* Back to Dashboard */
+.dark .driver-shift-page .shift-back-button,
+[data-theme="dark"] .driver-shift-page .shift-back-button {
+    color: #cbd5e1;
+}
+
+.dark .driver-shift-page .shift-back-button:hover,
+[data-theme="dark"] .driver-shift-page .shift-back-button:hover {
+    color: #ffffff;
+}
+
+/* Call Owner section */
+.dark .driver-shift-page .call-owner-section,
+[data-theme="dark"] .driver-shift-page .call-owner-section {
+    background: #1e293b;
+    border-color: #334155;
+}
+
+.dark .driver-shift-page .call-owner-text strong,
+[data-theme="dark"] .driver-shift-page .call-owner-text strong {
+    color: #ffffff;
+}
+
+.dark .driver-shift-page .call-owner-text span,
+[data-theme="dark"] .driver-shift-page .call-owner-text span {
+    color: #cbd5e1;
+}
+
+/* Call Owner button */
+.dark .driver-shift-page .call-owner-button,
+[data-theme="dark"] .driver-shift-page .call-owner-button {
+    background: #1e293b;
+    color: #4ade80;
+    border-color: #22c55e;
+}
+
+.dark .driver-shift-page .call-owner-button:hover,
+[data-theme="dark"] .driver-shift-page .call-owner-button:hover {
+    background: #14532d;
+    color: #86efac;
+}
+
+/* Day-off modal */
+.dark .driver-shift-page .day-off-modal,
+[data-theme="dark"] .driver-shift-page .day-off-modal {
+    background: #111827;
+    color: #ffffff;
+}
+
+.dark .driver-shift-page .day-off-modal h2,
+[data-theme="dark"] .driver-shift-page .day-off-modal h2,
+
+.dark .driver-shift-page .day-off-modal label,
+[data-theme="dark"] .driver-shift-page .day-off-modal label {
+    color: #ffffff;
+}
+
+.dark .driver-shift-page .day-off-modal p,
+[data-theme="dark"] .driver-shift-page .day-off-modal p {
+    color: #cbd5e1;
+}
+
+/* Select inside day-off modal */
+.dark .driver-shift-page .day-off-modal select,
+[data-theme="dark"] .driver-shift-page .day-off-modal select {
+    background: #1e293b;
+    color: #ffffff;
+    border-color: #475569;
+}
+
+/* Empty state */
+.dark .driver-shift-page .shift-empty-card h2,
+[data-theme="dark"] .driver-shift-page .shift-empty-card h2 {
+    color: #ffffff;
+}
+
+.dark .driver-shift-page .shift-empty-card p,
+[data-theme="dark"] .driver-shift-page .shift-empty-card p {
+    color: #cbd5e1;
+}

@@ -1,0 +1,484 @@
+/* ============================================================
+   DRIVER — CURRENT ASSIGNMENT
+   ============================================================ */
+
+.assignment-page {
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 35px 20px 55px;
+
+    background: var(--app-background);
+    color: var(--app-text);
+}
+
+.assignment-container {
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+
+/* ============================================================
+   BACK
+   ============================================================ */
+
+.assignment-back-button {
+    border: none;
+    background: transparent;
+    padding: 8px 0;
+    margin-bottom: 20px;
+
+    color: var(--app-text-secondary);
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: color 0.18s ease;
+}
+
+.assignment-back-button:hover {
+    color: var(--app-primary);
+}
+
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.assignment-page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+
+    margin-bottom: 25px;
+}
+
+.assignment-eyebrow {
+    margin: 0 0 6px;
+
+    color: var(--app-primary);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+}
+
+.assignment-page-header h1 {
+    margin: 0;
+
+    color: var(--app-text);
+
+    font-size: 32px;
+    line-height: 1.15;
+    font-weight: 750;
+    letter-spacing: -0.04em;
+}
+
+.assignment-page-header > div > p:last-child {
+    margin: 8px 0 0;
+
+    color: var(--app-text-secondary);
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* ============================================================
+   STATUS
+   ============================================================ */
+
+.assignment-status {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 7px 13px;
+
+    background: rgba(34, 197, 94, 0.10);
+    color: #22c55e;
+
+    border: 1px solid rgba(34, 197, 94, 0.22);
+    border-radius: 999px;
+
+    font-size: 12px;
+    font-weight: 750;
+
+    white-space: nowrap;
+}
+
+
+/* ============================================================
+   SECTIONS
+   ============================================================ */
+
+.assignment-section {
+    margin-bottom: 20px;
+    padding: 26px;
+
+    background: var(--app-surface);
+
+    border: 1px solid var(--app-border);
+    border-radius: 14px;
+
+    box-shadow:
+        0 8px 30px rgba(15, 23, 42, 0.06);
+
+    transition:
+        border-color 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+[data-theme="dark"] .assignment-section {
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.18);
+}
+
+.assignment-section:hover {
+    border-color: color-mix(
+        in srgb,
+        var(--app-primary) 25%,
+        var(--app-border)
+    );
+}
+
+
+/* ============================================================
+   SECTION HEADING
+   ============================================================ */
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    padding-bottom: 20px;
+    margin-bottom: 22px;
+
+    border-bottom: 1px solid var(--app-border);
+}
+
+.section-icon {
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: color-mix(
+        in srgb,
+        var(--app-primary) 10%,
+        var(--app-surface-secondary)
+    );
+
+    border: 1px solid color-mix(
+        in srgb,
+        var(--app-primary) 18%,
+        var(--app-border)
+    );
+
+    border-radius: 10px;
+
+    font-size: 18px;
+}
+
+.section-heading h2 {
+    margin: 0;
+
+    color: var(--app-text);
+
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.section-heading p {
+    margin: 4px 0 0;
+
+    color: var(--app-text-secondary);
+
+    font-size: 12px;
+}
+
+
+/* ============================================================
+   DETAILS
+   ============================================================ */
+
+.assignment-details-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    column-gap: 55px;
+    row-gap: 24px;
+}
+
+.assignment-detail {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.assignment-detail span {
+    color: var(--app-text-muted);
+
+    font-size: 11px;
+    font-weight: 650;
+}
+
+.assignment-detail strong {
+    color: var(--app-text);
+
+    font-size: 14px;
+    font-weight: 650;
+
+    overflow-wrap: anywhere;
+}
+
+.assignment-detail .active-text {
+    color: #22c55e;
+}
+
+.assignment-detail .rent-value {
+    color: var(--app-text);
+
+    font-size: 17px;
+    font-weight: 750;
+}
+
+
+/* ============================================================
+   BUSINESS CONTACT
+   ============================================================ */
+
+.business-contact-card {
+    margin-top: 20px;
+    padding: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+
+    background: var(--app-surface-secondary);
+
+    border: 1px solid var(--app-border);
+    border-radius: 11px;
+}
+
+.business-contact-card > div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    min-width: 0;
+}
+
+.business-contact-card span {
+    color: var(--app-text-muted);
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.business-contact-card strong {
+    color: var(--app-text);
+
+    font-size: 14px;
+    font-weight: 700;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* ============================================================
+   CALL OWNER
+   ============================================================ */
+
+.call-owner-button {
+    border: 1px solid color-mix(
+        in srgb,
+        var(--app-primary) 30%,
+        var(--app-border)
+    );
+
+    background: color-mix(
+        in srgb,
+        var(--app-primary) 10%,
+        var(--app-surface)
+    );
+
+    color: var(--app-primary);
+
+    border-radius: 9px;
+
+    padding: 10px 14px;
+
+    font: inherit;
+    font-size: 12px;
+    font-weight: 750;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition:
+        background 0.18s ease,
+        border-color 0.18s ease,
+        transform 0.18s ease;
+}
+
+.call-owner-button:hover {
+    background: color-mix(
+        in srgb,
+        var(--app-primary) 16%,
+        var(--app-surface)
+    );
+
+    border-color: var(--app-primary);
+
+    transform: translateY(-1px);
+}
+
+
+/* ============================================================
+   EMPTY STATE
+   ============================================================ */
+
+.assignment-empty-card {
+    max-width: 600px;
+
+    margin: 50px auto;
+    padding: 55px 30px;
+
+    background: var(--app-surface);
+
+    border: 1px solid var(--app-border);
+    border-radius: 14px;
+
+    text-align: center;
+
+    box-shadow:
+        0 8px 30px rgba(15, 23, 42, 0.06);
+}
+
+[data-theme="dark"] .assignment-empty-card {
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.18);
+}
+
+.assignment-empty-icon {
+    width: 58px;
+    height: 58px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--app-surface-secondary);
+
+    border: 1px solid var(--app-border);
+
+    border-radius: 50%;
+
+    font-size: 25px;
+}
+
+.assignment-empty-card h2 {
+    margin: 0 0 9px;
+
+    color: var(--app-text);
+
+    font-size: 20px;
+}
+
+.assignment-empty-card p {
+    margin: 0;
+
+    color: var(--app-text-secondary);
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* ============================================================
+   LOADING
+   ============================================================ */
+
+.assignment-loading {
+    padding: 70px 20px;
+
+    color: var(--app-text-secondary);
+
+    text-align: center;
+
+    font-size: 15px;
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 700px) {
+
+    .assignment-page {
+        padding: 22px 14px 40px;
+    }
+
+    .assignment-page-header {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .assignment-page-header h1 {
+        font-size: 27px;
+    }
+
+    .assignment-section {
+        padding: 20px 17px;
+    }
+
+    .assignment-details-grid {
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+    }
+
+    .assignment-status {
+        align-self: flex-start;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+    }
+}
+
+
+/* ============================================================
+   SMALL MOBILE
+   ============================================================ */
+
+@media (max-width: 600px) {
+
+    .business-contact-card {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .call-owner-button {
+        width: 100%;
+    }
+}

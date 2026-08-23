@@ -1,0 +1,432 @@
+:root {
+
+    --app-background: #f7f8fa;
+
+    --app-surface: #ffffff;
+
+    --app-surface-secondary: #f8fafc;
+
+    --app-border: #e5e9ef;
+
+    --app-text: #172033;
+
+    --app-text-secondary: #64748b;
+
+    --app-text-muted: #94a3b8;
+
+    --app-primary: #2563eb;
+
+}
+
+
+[data-theme="dark"] {
+
+    --app-background: #0f172a;
+
+    --app-surface: #111827;
+
+    --app-surface-secondary: #1e293b;
+
+    --app-border: #334155;
+
+    --app-text: #f1f5f9;
+
+    --app-text-secondary: #cbd5e1;
+
+    --app-text-muted: #94a3b8;
+
+    --app-primary: #60a5fa;
+
+}
+
+
+/* ============================================================
+   GLOBAL
+   ============================================================ */
+
+html,
+body,
+#root {
+    min-height: 100%;
+}
+
+
+body {
+
+    margin: 0;
+
+    background:
+        var(--app-background);
+
+    color:
+        var(--app-text);
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+/* ============================================================
+   COMMON DARK MODE
+   ============================================================ */
+
+[data-theme="dark"] {
+
+    color-scheme: dark;
+
+}
+
+
+[data-theme="dark"] input,
+[data-theme="dark"] select,
+[data-theme="dark"] textarea {
+
+    background: #111827;
+
+    color: #f1f5f9;
+
+    border-color: #334155;
+
+}
+
+
+[data-theme="dark"]
+input::placeholder,
+[data-theme="dark"]
+textarea::placeholder {
+
+    color: #64748b;
+
+}
+/* ============================================================
+   FLEETRENT PAGE THEME OVERRIDES
+   Keeps existing light-mode designs intact and makes dark mode
+   consistent across auth, landing, driver and business pages.
+   ============================================================ */
+
+[data-theme="dark"] body {
+    background: var(--app-background) !important;
+    color: var(--app-text) !important;
+}
+
+/* ---------------- LANDING / AUTH ---------------- */
+[data-theme="dark"] .landing-page,
+[data-theme="dark"] .auth-page {
+    background: var(--app-background) !important;
+    color: var(--app-text) !important;
+}
+
+[data-theme="dark"] .navbar {
+    background: #111827 !important;
+    border-bottom-color: var(--app-border) !important;
+    color: var(--app-text) !important;
+}
+
+[data-theme="dark"] .logo,
+[data-theme="dark"] .hero h1,
+[data-theme="dark"] .role-section h2,
+[data-theme="dark"] .role-card h3,
+[data-theme="dark"] .auth-card h1,
+[data-theme="dark"] .auth-header h1 {
+    color: #f8fafc !important;
+}
+
+[data-theme="dark"] .hero p,
+[data-theme="dark"] .role-card p,
+[data-theme="dark"] .auth-subtitle,
+[data-theme="dark"] .auth-header p,
+[data-theme="dark"] .form-group label,
+[data-theme="dark"] .register-link,
+[data-theme="dark"] .back-button {
+    color: #cbd5e1 !important;
+}
+
+[data-theme="dark"] .role-section {
+    background: #0f172a !important;
+    color: #f8fafc !important;
+}
+
+[data-theme="dark"] .role-card,
+[data-theme="dark"] .auth-card {
+    background: #111827 !important;
+    border-color: #334155 !important;
+    color: #f8fafc !important;
+    box-shadow: 0 12px 35px rgba(0,0,0,.25) !important;
+}
+
+[data-theme="dark"] .auth-card input,
+[data-theme="dark"] .auth-card textarea,
+[data-theme="dark"] .auth-card select {
+    background: #0f172a !important;
+    color: #f8fafc !important;
+    border-color: #475569 !important;
+}
+
+[data-theme="dark"] .auth-card input::placeholder {
+    color: #64748b !important;
+}
+
+[data-theme="dark"] .forgot-password a,
+[data-theme="dark"] .register-link a,
+[data-theme="dark"] .back-button {
+    color: #60a5fa !important;
+}
+
+[data-theme="dark"] .auth-divider::before,
+[data-theme="dark"] .auth-divider::after {
+    background: #334155 !important;
+}
+
+/* ---------------- BUSINESS PAGES ---------------- */
+[data-theme="dark"] .business-payment-page,
+[data-theme="dark"] .vehicle-page,
+[data-theme="dark"] .business-shift-history-page,
+[data-theme="dark"] .business-assignment-page {
+    background: var(--app-background) !important;
+    color: var(--app-text) !important;
+}
+
+[data-theme="dark"] .business-payment-page h1,
+[data-theme="dark"] .business-payment-page h2,
+[data-theme="dark"] .business-payment-page h3,
+[data-theme="dark"] .vehicle-page h1,
+[data-theme="dark"] .vehicle-page h2,
+[data-theme="dark"] .vehicle-page h3,
+[data-theme="dark"] .business-shift-history-page h1,
+[data-theme="dark"] .business-shift-history-page h2,
+[data-theme="dark"] .business-shift-history-page h3,
+[data-theme="dark"] .business-assignment-page h1,
+[data-theme="dark"] .business-assignment-page h2,
+[data-theme="dark"] .business-assignment-page h3 {
+    color: #f8fafc !important;
+}
+
+[data-theme="dark"] .business-payment-page p,
+[data-theme="dark"] .business-payment-page span,
+[data-theme="dark"] .business-payment-page label,
+[data-theme="dark"] .vehicle-page p,
+[data-theme="dark"] .vehicle-page span,
+[data-theme="dark"] .vehicle-page label,
+[data-theme="dark"] .business-shift-history-page p,
+[data-theme="dark"] .business-shift-history-page span,
+[data-theme="dark"] .business-shift-history-page label,
+[data-theme="dark"] .business-assignment-page p,
+[data-theme="dark"] .business-assignment-page span,
+[data-theme="dark"] .business-assignment-page label {
+    color: #cbd5e1;
+}
+
+[data-theme="dark"] .business-payment-summary,
+[data-theme="dark"] .business-payment-list-card,
+[data-theme="dark"] .business-payment-modal,
+[data-theme="dark"] .business-payment-empty,
+[data-theme="dark"] .vehicle-stat-card,
+[data-theme="dark"] .vehicle-list-card,
+[data-theme="dark"] .vehicle-modal,
+[data-theme="dark"] .business-shift-stat,
+[data-theme="dark"] .business-shift-history-card,
+[data-theme="dark"] .business-history-card,
+[data-theme="dark"] .assignment-card,
+[data-theme="dark"] .assignment-shift-card,
+[data-theme="dark"] .assignment-alert,
+[data-theme="dark"] .assignment-error-card {
+    background: #111827 !important;
+    border-color: #334155 !important;
+    color: #f8fafc !important;
+}
+
+[data-theme="dark"] .business-payment-toolbar,
+[data-theme="dark"] .business-shift-toolbar,
+[data-theme="dark"] .vehicle-toolbar {
+    color: #f8fafc;
+}
+
+[data-theme="dark"] .business-payment-search,
+[data-theme="dark"] .business-payment-toolbar select,
+[data-theme="dark"] .business-shift-search,
+[data-theme="dark"] .business-shift-filter-group select,
+[data-theme="dark"] .vehicle-search,
+[data-theme="dark"] .vehicle-form-grid input,
+[data-theme="dark"] .vehicle-form-grid select,
+[data-theme="dark"] .vehicle-form-grid textarea {
+    background: #0f172a !important;
+    color: #f8fafc !important;
+    border-color: #475569 !important;
+}
+
+[data-theme="dark"] .business-payment-search input,
+[data-theme="dark"] .business-shift-search input,
+[data-theme="dark"] .vehicle-search input {
+    background: transparent !important;
+    color: #f8fafc !important;
+}
+
+[data-theme="dark"] .business-payment-table th,
+[data-theme="dark"] .business-payment-table td,
+[data-theme="dark"] .vehicle-table th,
+[data-theme="dark"] .vehicle-table td {
+    border-color: #334155 !important;
+}
+
+[data-theme="dark"] .business-payment-table th,
+[data-theme="dark"] .vehicle-table th {
+    background: #0f172a !important;
+    color: #94a3b8 !important;
+}
+
+[data-theme="dark"] .business-payment-table td,
+[data-theme="dark"] .vehicle-table td {
+    color: #cbd5e1 !important;
+}
+
+[data-theme="dark"] .vehicle-main-info strong,
+[data-theme="dark"] .business-payment-table td strong,
+[data-theme="dark"] .business-history-card-header h3,
+[data-theme="dark"] .business-history-grid strong,
+[data-theme="dark"] .assignment-detail-list strong,
+[data-theme="dark"] .today-shift-details strong,
+[data-theme="dark"] .reference-info strong {
+    color: #f8fafc !important;
+}
+
+/* ---------------- DRIVER PAGES ---------------- */
+[data-theme="dark"] .driver-dashboard,
+[data-theme="dark"] .assignment-page,
+[data-theme="dark"] .driver-payments-page,
+[data-theme="dark"] .profile-page,
+[data-theme="dark"] .driver-shift-page,
+[data-theme="dark"] .shift-history-page {
+    background: var(--app-background) !important;
+    color: var(--app-text) !important;
+}
+
+[data-theme="dark"] .driver-dashboard-header,
+[data-theme="dark"] .dashboard-card,
+[data-theme="dark"] .profile-card,
+[data-theme="dark"] .business-contact-card,
+[data-theme="dark"] .today-payment-card,
+[data-theme="dark"] .payment-history-card,
+[data-theme="dark"] .shift-card,
+[data-theme="dark"] .shift-empty-card,
+[data-theme="dark"] .history-card {
+    background: #111827 !important;
+    border-color: #334155 !important;
+    color: #f8fafc !important;
+}
+
+[data-theme="dark"] .driver-dashboard-header h1,
+[data-theme="dark"] .dashboard-card h3,
+[data-theme="dark"] .profile-header h1,
+[data-theme="dark"] .payments-header h1,
+[data-theme="dark"] .shift-header h1,
+[data-theme="dark"] .history-header h1,
+[data-theme="dark"] .assignment-page-header h1,
+[data-theme="dark"] .today-payment-header h2,
+[data-theme="dark"] .shift-card-header h2,
+[data-theme="dark"] .history-card-header h2 {
+    color: #f8fafc !important;
+}
+
+[data-theme="dark"] .dashboard-welcome,
+[data-theme="dark"] .dashboard-card p,
+[data-theme="dark"] .profile-header p,
+[data-theme="dark"] .profile-field label,
+[data-theme="dark"] .profile-field small,
+[data-theme="dark"] .payments-header p:last-child,
+[data-theme="dark"] .shift-header p:last-child,
+[data-theme="dark"] .history-header p,
+[data-theme="dark"] .assignment-page-header > div > p:last-child,
+[data-theme="dark"] .assignment-detail span,
+[data-theme="dark"] .today-payment-details span,
+[data-theme="dark"] .history-details span,
+[data-theme="dark"] .business-contact-card span {
+    color: #94a3b8 !important;
+}
+
+[data-theme="dark"] .profile-field input,
+[data-theme="dark"] .profile-field textarea,
+[data-theme="dark"] .day-off-modal select {
+    background: #0f172a !important;
+    color: #f8fafc !important;
+    border-color: #475569 !important;
+}
+
+[data-theme="dark"] .profile-field input:disabled,
+[data-theme="dark"] .profile-field textarea:disabled {
+    background: #1e293b !important;
+    color: #cbd5e1 !important;
+}
+
+[data-theme="dark"] .payment-summary,
+[data-theme="dark"] .payment-history-section,
+[data-theme="dark"] .payment-modal,
+[data-theme="dark"] .assignment-section,
+[data-theme="dark"] .assignment-empty-card {
+    background: #111827 !important;
+    border-color: #334155 !important;
+    color: #f8fafc !important;
+}
+
+[data-theme="dark"] .payment-summary span,
+[data-theme="dark"] .today-payment-details span,
+[data-theme="dark"] .history-payment-middle span,
+[data-theme="dark"] .card-label {
+    color: #94a3b8 !important;
+}
+
+[data-theme="dark"] .payment-summary strong,
+[data-theme="dark"] .today-payment-details strong,
+[data-theme="dark"] .history-payment-middle strong,
+[data-theme="dark"] .payment-history-card strong {
+    color: #f8fafc !important;
+}
+
+[data-theme="dark"] .day-off-modal {
+    background: #111827 !important;
+    border-color: #334155 !important;
+    color: #f8fafc !important;
+}
+
+[data-theme="dark"] .day-off-modal h2 {
+    color: #f8fafc !important;
+}
+
+[data-theme="dark"] .day-off-modal p,
+[data-theme="dark"] .day-off-modal label {
+    color: #cbd5e1 !important;
+}
+
+/* ---------------- COMMON BUTTONS / MODALS ---------------- */
+[data-theme="dark"] button:not(.theme-toggle) {
+    transition: background .2s ease, border-color .2s ease, color .2s ease;
+}
+
+[data-theme="dark"] .business-payment-modal-overlay,
+[data-theme="dark"] .vehicle-modal-overlay,
+[data-theme="dark"] .day-off-overlay,
+[data-theme="dark"] .payment-modal-overlay {
+    background: rgba(2, 6, 23, .72) !important;
+}
+
+/* Theme switcher on auth / password-reset pages */
+.auth-page,
+.password-reset-page {
+    position: relative;
+}
+
+.auth-theme-toggle,
+.password-reset-theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 24px;
+    z-index: 2000;
+}
+
+@media (max-width: 600px) {
+    .auth-theme-toggle,
+    .password-reset-theme-toggle {
+        top: 12px;
+        right: 12px;
+    }
+}

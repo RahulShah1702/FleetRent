@@ -1,0 +1,2080 @@
+.business-dashboard-page {
+    min-height: 100vh;
+    background: #f6f8fb;
+    color: #172033;
+    padding: 32px 5%;
+}
+
+.business-dashboard-header {
+    max-width: 1400px;
+    margin: 0 auto 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.business-eyebrow,
+.section-eyebrow {
+    margin: 0 0 6px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .14em;
+    color: #64748b;
+}
+
+.business-dashboard-header h1 {
+    margin: 0;
+    font-size: 32px;
+    letter-spacing: -.03em;
+}
+
+.business-header-subtitle {
+    margin: 8px 0 0;
+    color: #64748b;
+}
+
+.business-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.business-icon-button,
+.business-profile-button,
+.primary-dashboard-button,
+.call-driver-button,
+.panel-heading button {
+    border: 0;
+    cursor: pointer;
+    font: inherit;
+}
+
+.business-icon-button {
+    position: relative;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    font-size: 18px;
+}
+
+.business-notification-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    min-width: 19px;
+    height: 19px;
+    padding: 0 5px;
+    display: grid;
+    place-items: center;
+    border-radius: 999px;
+    background: #dc2626;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.business-profile-button {
+    padding: 11px 16px;
+    border-radius: 10px;
+    background: #172033;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.business-dashboard-content {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.business-dashboard-error {
+    max-width: 1400px;
+    margin: 0 auto 20px;
+    padding: 13px 16px;
+    border-radius: 10px;
+    background: #fff1f2;
+    border: 1px solid #fecdd3;
+    color: #be123c;
+}
+
+.business-dashboard-loading {
+    min-height: 80vh;
+    display: grid;
+    place-items: center;
+    color: #64748b;
+}
+
+.business-overview-section,
+.business-activity-section {
+    margin-bottom: 28px;
+}
+
+.section-heading-row,
+.panel-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 14px;
+}
+
+.section-heading-row h2,
+.panel-heading h2 {
+    margin: 0;
+    font-size: 20px;
+    letter-spacing: -.02em;
+}
+
+.primary-dashboard-button {
+    padding: 10px 14px;
+    border-radius: 9px;
+    background: #2563eb;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.business-stat-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.business-stat-card {
+    min-height: 132px;
+    padding: 18px;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 4px 18px rgba(15, 23, 42, .04);
+}
+
+.business-stat-card span,
+.business-stat-card small {
+    display: block;
+}
+
+.business-stat-card span {
+    color: #64748b;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.business-stat-card strong {
+    display: block;
+    margin: 12px 0 5px;
+    font-size: 29px;
+    letter-spacing: -.04em;
+}
+
+.business-stat-card small {
+    color: #94a3b8;
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.business-table-card,
+.business-panel,
+.business-empty-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 4px 18px rgba(15, 23, 42, .04);
+}
+
+.business-table-wrapper {
+    overflow-x: auto;
+}
+
+.business-activity-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 850px;
+}
+
+.business-activity-table th,
+.business-activity-table td {
+    padding: 15px 18px;
+    text-align: left;
+    border-bottom: 1px solid #eef2f7;
+    font-size: 13px;
+}
+
+.business-activity-table th {
+    color: #64748b;
+    background: #f8fafc;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+}
+
+.business-activity-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.vehicle-cell {
+    font-weight: 800;
+}
+
+.business-status {
+    display: inline-flex;
+    padding: 6px 9px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.business-status-in-progress {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.business-status-completed {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.business-status-day-off {
+    background: #fef3c7;
+    color: #a16207;
+}
+
+.business-status-not-started {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.call-driver-button {
+    padding: 7px 10px;
+    border-radius: 8px;
+    background: #eff6ff;
+    color: #1d4ed8;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.no-action {
+    color: #94a3b8;
+}
+
+.business-mini-summary {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.business-mini-summary span {
+    padding: 7px 10px;
+    border-radius: 8px;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    color: #64748b;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.business-empty-card {
+    padding: 34px;
+    text-align: center;
+}
+
+.business-empty-card h3 {
+    margin-bottom: 7px;
+}
+
+.business-empty-card p {
+    color: #64748b;
+    font-size: 13px;
+}
+
+.business-bottom-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 18px;
+}
+
+.business-panel {
+    padding: 20px;
+}
+
+.panel-heading button {
+    background: transparent;
+    color: #2563eb;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.payment-overview-grid,
+.vehicle-summary-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.payment-overview-grid > div,
+.vehicle-summary-list > div {
+    padding: 14px;
+    border-radius: 10px;
+    background: #f8fafc;
+}
+
+.payment-overview-grid span,
+.vehicle-summary-list span {
+    display: block;
+    color: #64748b;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.payment-overview-grid strong,
+.vehicle-summary-list strong {
+    display: block;
+    margin-top: 7px;
+    font-size: 18px;
+}
+
+.business-notifications-panel {
+    margin-bottom: 40px;
+}
+
+.notification-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.business-notification-item {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 9px 1fr auto;
+    gap: 12px;
+    align-items: start;
+    padding: 14px;
+    border: 1px solid #e5e7eb;
+    border-radius: 11px;
+    background: #fff;
+    text-align: left;
+    cursor: pointer;
+}
+
+.business-notification-item.unread {
+    background: #f8fbff;
+    border-color: #bfdbfe;
+}
+
+.business-notification-item.read {
+    opacity: .72;
+}
+
+.notification-dot {
+    width: 8px;
+    height: 8px;
+    margin-top: 5px;
+    border-radius: 50%;
+    background: #2563eb;
+}
+
+.business-notification-item.read .notification-dot {
+    background: #cbd5e1;
+}
+
+.notification-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.notification-copy strong {
+    color: #172033;
+    font-size: 13px;
+}
+
+.notification-copy span {
+    color: #64748b;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.notification-copy small {
+    color: var(--app-text-muted);
+    font-weight: 600;
+    font-size: 11px;
+}
+
+
+.notification-empty {
+    padding: 28px;
+    text-align: center;
+    color: #64748b;
+}
+
+.notification-empty span {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 25px;
+}
+
+@media (max-width: 1200px) {
+    .business-stat-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 800px) {
+    .business-dashboard-page {
+        padding: 22px 16px;
+    }
+
+    .business-dashboard-header,
+    .section-heading-row,
+    .panel-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .business-header-actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .business-stat-grid,
+    .business-bottom-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 520px) {
+    .business-stat-grid,
+    .business-bottom-grid,
+    .payment-overview-grid,
+    .vehicle-summary-list {
+        grid-template-columns: 1fr;
+    }
+
+    .business-dashboard-header h1 {
+        font-size: 26px;
+    }
+}
+
+/* ============================================================
+   BUSINESS LOGOUT BUTTON
+   ============================================================ */
+
+.business-logout-button {
+    border: 1px solid #e2e8f0;
+    background: #ffffff;
+    color: #dc2626;
+    padding: 9px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.business-logout-button:hover {
+    background: #fef2f2;
+    border-color: #fecaca;
+    color: #b91c1c;
+}
+
+.business-logout-button:active {
+    transform: scale(0.98);
+}
+
+/* ============================================================
+   FLEET OVERVIEW HEADER ACTIONS
+   ============================================================ */
+
+.business-fleet-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+
+/* Shared button styling */
+
+.business-fleet-actions button {
+    min-height: 42px;
+    padding: 0 18px;
+
+    border-radius: 9px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.18s ease,
+        border-color 0.18s ease,
+        transform 0.18s ease;
+}
+
+
+/* Shift History */
+
+.business-shift-history-button {
+    border: 1px solid #bfdbfe;
+    background: #eff6ff;
+    color: #1d4ed8;
+}
+
+.business-shift-history-button:hover {
+    background: #dbeafe;
+    border-color: #93c5fd;
+}
+
+
+/* Manage Vehicles */
+
+.business-manage-vehicles-button {
+    border: 1px solid #2563eb;
+    background: #2563eb;
+    color: #ffffff;
+}
+
+.business-manage-vehicles-button:hover {
+    background: #1d4ed8;
+    border-color: #1d4ed8;
+}
+
+
+.business-fleet-actions button:active {
+    transform: scale(0.98);
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 650px) {
+
+    .business-fleet-actions {
+        width: 100%;
+        justify-content: stretch;
+    }
+
+    .business-fleet-actions button {
+        flex: 1;
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    .business-fleet-actions {
+        flex-direction: column;
+    }
+
+    .business-fleet-actions button {
+        width: 100%;
+    }
+
+}
+
+/* ============================================================
+   DASHBOARD FLEET ACTIONS
+   ============================================================ */
+
+.business-fleet-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+
+.business-fleet-actions button {
+    min-height: 42px;
+    padding: 0 18px;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition:
+        background 0.18s ease,
+        border-color 0.18s ease,
+        transform 0.18s ease;
+}
+
+
+.business-shift-history-button {
+    border: 1px solid #bfdbfe;
+    background: #eff6ff;
+    color: #1d4ed8;
+}
+
+
+.business-shift-history-button:hover {
+    background: #dbeafe;
+}
+
+
+.business-fleet-actions .primary-dashboard-button {
+    border: 1px solid #2563eb;
+    background: #2563eb;
+    color: #ffffff;
+}
+
+
+.business-fleet-actions .primary-dashboard-button:hover {
+    background: #1d4ed8;
+}
+
+
+.business-fleet-actions button:active {
+    transform: scale(0.98);
+}
+
+
+/* ============================================================
+   VEHICLE ACTIVITY ACTIONS
+   ============================================================ */
+
+.business-activity-actions {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    flex-wrap: wrap;
+}
+
+
+.view-assignment-dashboard-button {
+    border: 1px solid #dbe2ea;
+    background: #ffffff;
+    color: #334155;
+    border-radius: 7px;
+    padding: 8px 11px;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+.view-assignment-dashboard-button:hover {
+    background: #f8fafc;
+}
+
+
+.business-driver-cell strong {
+    color: #172033;
+    font-size: 13px;
+}
+
+
+/* ============================================================
+   NEW DASHBOARD STATUS
+   ============================================================ */
+
+.business-status-no-shift {
+    background: #f1f5f9;
+    color: #64748b;
+}
+
+
+.business-status-unassigned {
+    background: #f1f5f9;
+    color: #64748b;
+}
+
+
+.business-status-running {
+    background: #ecfdf3;
+    color: #15803d;
+}
+
+
+.business-status-in-progress {
+    background: #ecfdf3;
+    color: #15803d;
+}
+
+
+.business-status-completed {
+    background: #eff6ff;
+    color: #1d4ed8;
+}
+
+
+.business-status-day-off {
+    background: #fff7ed;
+    color: #c2410c;
+}
+
+
+.business-status-not-started {
+    background: #fffbeb;
+    color: #b45309;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 700px) {
+
+    .business-fleet-actions {
+        width: 100%;
+        justify-content: stretch;
+    }
+
+
+    .business-fleet-actions button {
+        flex: 1;
+    }
+
+
+    .business-activity-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+
+    .business-activity-actions button {
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .business-fleet-actions {
+        flex-direction: column;
+    }
+
+
+    .business-fleet-actions button {
+        width: 100%;
+    }
+
+}
+
+/* ============================================================
+   VEHICLE ACTIVITY CONTAINER
+   ============================================================ */
+
+.business-activity-container {
+    width: 100%;
+}
+
+
+.business-activity-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 12px;
+}
+
+
+.business-activity-search {
+    flex: 1;
+
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 0 14px;
+
+    background: #ffffff;
+
+    border: 1px solid #dfe4ea;
+    border-radius: 9px;
+}
+
+
+.business-activity-search:focus-within {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(37, 99, 235, 0.07);
+}
+
+
+.business-activity-search input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #172033;
+
+    font-size: 15px;
+}
+
+
+.business-activity-clear {
+    height: 42px;
+
+    padding: 0 14px;
+
+    border: 1px solid #dfe4ea;
+
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: #64748b;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+.business-activity-clear:hover {
+    background: #f8fafc;
+}
+
+
+/* ============================================================
+   FIX TABLE HEIGHT
+   ============================================================ */
+
+.business-activity-table-card {
+    overflow: hidden;
+}
+
+
+.business-activity-table-card
+.business-table-wrapper {
+    max-height: 520px;
+
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+
+/* Sticky header while scrolling */
+
+.business-activity-table
+thead th {
+    position: sticky;
+    top: 0;
+
+    z-index: 2;
+
+    background: #fafbfc;
+}
+
+
+/* ============================================================
+   NO RESULTS
+   ============================================================ */
+
+.business-activity-no-results {
+    padding: 35px 20px;
+
+    border: 1px solid #e5e9ef;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    color: #64748b;
+
+    text-align: center;
+
+    font-size: 13px;
+}
+
+
+/* ============================================================
+   PAGINATION
+   ============================================================ */
+
+.business-activity-pagination {
+    min-height: 52px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 10px 4px;
+}
+
+
+.business-activity-pagination > span {
+    color: #64748b;
+
+    font-size: 11px;
+}
+
+
+.business-activity-pagination > div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+.business-activity-pagination button {
+    width: 34px;
+    height: 34px;
+
+    border: 1px solid #dfe4ea;
+
+    border-radius: 7px;
+
+    background: #ffffff;
+
+    color: #334155;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+.business-activity-pagination button:hover:not(:disabled) {
+    background: #f8fafc;
+}
+
+
+.business-activity-pagination button:disabled {
+    opacity: 0.4;
+
+    cursor: not-allowed;
+}
+
+
+.business-activity-pagination strong {
+    min-width: 54px;
+
+    text-align: center;
+
+    color: #334155;
+
+    font-size: 11px;
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 650px) {
+
+    .business-activity-toolbar {
+        align-items: stretch;
+
+    }
+
+
+    .business-activity-clear {
+        flex-shrink: 0;
+    }
+
+
+    .business-activity-table-card
+    .business-table-wrapper {
+        max-height: 430px;
+    }
+
+
+    .business-activity-pagination {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+}
+
+/* ============================================================
+   BUSINESS DASHBOARD FOOTER
+   ============================================================ */
+
+.business-dashboard-footer {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 42px auto 0;
+    padding: 22px 0 8px;
+
+    border-top: 1px solid #e2e8f0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    color: #64748b;
+}
+
+
+.business-footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+.business-footer-brand strong {
+    color: #2563eb;
+
+    font-size: 16px;
+    font-weight: 800;
+}
+
+
+.business-footer-brand span {
+    color: #94a3b8;
+
+    font-size: 12px;
+}
+
+
+.business-footer-meta {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    color: #94a3b8;
+
+    font-size: 12px;
+}
+
+
+.business-footer-divider {
+    color: #cbd5e1;
+}
+
+
+@media (max-width: 650px) {
+
+    .business-dashboard-footer {
+        margin-top: 32px;
+        padding: 20px 0 6px;
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 8px;
+    }
+
+    .business-footer-brand {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 3px;
+    }
+
+    .business-footer-meta {
+        flex-wrap: wrap;
+    }
+
+}
+
+/* ============================================================
+   DARK THEME
+   ============================================================ */
+
+[data-theme="dark"] .business-dashboard-page {
+    background: #0f172a;
+    color: #f1f5f9;
+}
+
+
+[data-theme="dark"] .business-dashboard-page h1,
+[data-theme="dark"] .business-dashboard-page h2,
+[data-theme="dark"] .business-dashboard-page h3,
+[data-theme="dark"] .business-dashboard-page strong {
+    color: #f8fafc;
+}
+
+
+[data-theme="dark"] .business-header-subtitle,
+[data-theme="dark"] .section-eyebrow,
+[data-theme="dark"] .business-stat-card span,
+[data-theme="dark"] .business-stat-card small,
+[data-theme="dark"] .business-activity-table th,
+[data-theme="dark"] .business-activity-table td,
+[data-theme="dark"] .business-panel span,
+[data-theme="dark"] .business-notification-item span,
+[data-theme="dark"] .business-notification-item small {
+    color: #94a3b8;
+}
+
+
+/* cards */
+
+[data-theme="dark"] .business-stat-card,
+[data-theme="dark"] .business-table-card,
+[data-theme="dark"] .business-panel,
+[data-theme="dark"] .business-notifications-panel,
+[data-theme="dark"] .business-empty-card {
+    background: #111827;
+    border-color: #334155;
+}
+
+
+/* search */
+
+[data-theme="dark"] .business-activity-search {
+    background: #111827;
+    border-color: #334155;
+}
+
+
+[data-theme="dark"] .business-activity-search input {
+    color: #f8fafc;
+}
+
+
+/* table */
+
+[data-theme="dark"] .business-activity-table thead th {
+    background: #1e293b;
+    border-color: #334155;
+    color: #94a3b8;
+}
+
+
+[data-theme="dark"] .business-activity-table td {
+    background: #111827;
+    border-color: #334155;
+    color: #cbd5e1;
+}
+
+
+[data-theme="dark"] .business-activity-table tbody tr:hover td {
+    background: #172033;
+}
+
+
+/* buttons */
+
+[data-theme="dark"] .business-shift-history-button {
+    background: #172554;
+    border-color: #3b82f6;
+    color: #93c5fd;
+}
+
+
+[data-theme="dark"] .primary-dashboard-button {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+
+[data-theme="dark"] .view-assignment-dashboard-button {
+    background: #1e293b;
+    border-color: #475569;
+    color: #e2e8f0;
+}
+
+
+[data-theme="dark"] .call-driver-button {
+    background: #172554;
+    color: #93c5fd;
+    border-color: #3b82f6;
+}
+
+
+/* payment / fleet cards */
+
+[data-theme="dark"] .payment-overview-grid > div,
+[data-theme="dark"] .vehicle-summary-list > div {
+    background: #1e293b;
+}
+
+
+[data-theme="dark"] .payment-overview-grid span,
+[data-theme="dark"] .vehicle-summary-list span {
+    color: #94a3b8;
+}
+
+
+/* notifications */
+
+[data-theme="dark"] .business-notification-item {
+    background: #111827;
+    border-color: #334155;
+}
+
+
+[data-theme="dark"] .business-notification-item:hover {
+    background: #172033;
+}
+
+
+[data-theme="dark"] .business-notification-item strong {
+    color: #f8fafc;
+}
+
+
+/* footer */
+
+[data-theme="dark"] .app-footer {
+    border-top-color: #334155;
+}
+
+
+[data-theme="dark"] .app-footer-brand span,
+[data-theme="dark"] .app-footer-meta {
+    color: #64748b;
+}
+
+
+[data-theme="dark"] .app-footer-brand strong {
+    color: #60a5fa;
+}
+
+
+
+/* ============================================================
+   BUSINESS DASHBOARD — PROFESSIONAL VISUAL POLISH
+   ============================================================ */
+
+
+/* ============================================================
+   DASHBOARD BACKGROUND
+   ============================================================ */
+
+.business-dashboard-page {
+    background:
+        radial-gradient(
+            circle at 10% 0%,
+            rgba(37, 99, 235, 0.035),
+            transparent 32%
+        ),
+        var(--app-background);
+
+    color: var(--app-text);
+}
+
+
+/* ============================================================
+   STAT CARDS
+   ============================================================ */
+
+.business-stat-card {
+    position: relative;
+    overflow: hidden;
+
+    background: var(--app-surface);
+    border-color: var(--app-border);
+
+    box-shadow:
+        0 2px 8px rgba(15, 23, 42, 0.035);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.business-stat-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background: var(--app-primary);
+
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.business-stat-card:hover {
+    transform: translateY(-2px);
+
+    border-color:
+        color-mix(
+            in srgb,
+            var(--app-primary) 25%,
+            var(--app-border)
+        );
+
+    box-shadow:
+        0 10px 28px rgba(15, 23, 42, 0.08);
+}
+
+.business-stat-card:hover::before {
+    opacity: 1;
+}
+
+
+/* ============================================================
+   MAIN PANELS
+   ============================================================ */
+
+.business-panel,
+.business-table-card,
+.business-notifications-panel {
+    background: var(--app-surface);
+    border-color: var(--app-border);
+
+    box-shadow:
+        0 2px 18px rgba(15, 23, 42, 0.025);
+}
+
+
+/* ============================================================
+   RENT / FLEET SUMMARY BOXES
+   ============================================================ */
+
+.payment-overview-grid > div,
+.vehicle-summary-list > div {
+    background:
+        color-mix(
+            in srgb,
+            var(--app-surface-secondary) 85%,
+            var(--app-surface)
+        );
+
+    border: 1px solid
+        color-mix(
+            in srgb,
+            var(--app-border) 75%,
+            transparent
+        );
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.payment-overview-grid > div:hover,
+.vehicle-summary-list > div:hover {
+    transform: translateY(-1px);
+}
+
+
+/* ============================================================
+   VEHICLE ACTIVITY
+   ============================================================ */
+
+.business-activity-table-card {
+    background: var(--app-surface);
+    border-color: var(--app-border);
+
+    box-shadow:
+        0 4px 18px rgba(15, 23, 42, 0.035);
+}
+
+.business-activity-search {
+    background: var(--app-surface);
+    border-color: var(--app-border);
+}
+
+.business-activity-search input {
+    color: var(--app-text);
+}
+
+.business-activity-search input::placeholder {
+    color: var(--app-text-muted);
+}
+
+
+/* ============================================================
+   ALERTS / NOTIFICATIONS
+   ============================================================ */
+
+.business-notifications-panel {
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 0;
+
+    background: var(--app-surface);
+
+    border: 1px solid var(--app-border);
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 8px 28px rgba(15, 23, 42, 0.055);
+}
+
+
+/* Header */
+
+.business-notifications-panel .panel-heading {
+    padding: 22px 24px 18px;
+
+    border-bottom: 1px solid var(--app-border);
+}
+
+.business-notifications-panel .panel-heading h2 {
+    margin-top: 4px;
+
+    font-size: 20px;
+    font-weight: 750;
+}
+
+
+/* Notification list */
+
+.notification-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    padding: 16px 18px 18px;
+}
+
+
+/* Individual alert */
+
+.business-notification-item {
+    position: relative;
+
+    width: 100%;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 13px;
+
+    padding: 16px 17px;
+
+    box-sizing: border-box;
+
+    border: 1px solid var(--app-border);
+
+    border-radius: 12px;
+
+    background:
+        color-mix(
+            in srgb,
+            var(--app-surface-secondary) 55%,
+            var(--app-surface)
+        );
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.18s ease,
+        border-color 0.18s ease,
+        background 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+
+/* Left accent */
+
+.business-notification-item::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 10px;
+    bottom: 10px;
+
+    width: 3px;
+
+    border-radius: 0 4px 4px 0;
+
+    background: var(--app-primary);
+
+    opacity: 0.85;
+}
+
+
+.business-notification-item:hover {
+    transform: translateY(-1px);
+
+    border-color:
+        color-mix(
+            in srgb,
+            var(--app-primary) 28%,
+            var(--app-border)
+        );
+
+    background:
+        color-mix(
+            in srgb,
+            var(--app-primary) 4%,
+            var(--app-surface)
+        );
+
+    box-shadow:
+        0 6px 18px rgba(15, 23, 42, 0.06);
+}
+
+
+/* Unread alert */
+
+.business-notification-item.unread {
+    border-color:
+        color-mix(
+            in srgb,
+            var(--app-primary) 22%,
+            var(--app-border)
+        );
+}
+
+
+/* Read alert */
+
+.business-notification-item.read {
+    opacity: 0.82;
+}
+
+
+/* Dot */
+
+.notification-dot {
+    width: 8px;
+    height: 8px;
+
+    flex: 0 0 8px;
+
+    margin-top: 6px;
+
+    border-radius: 50%;
+
+    background: var(--app-primary);
+
+    box-shadow:
+        0 0 0 4px
+        color-mix(
+            in srgb,
+            var(--app-primary) 10%,
+            transparent
+        );
+}
+
+
+/* Notification content */
+
+.notification-copy {
+    min-width: 0;
+
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.notification-copy strong {
+    color: var(--app-text);
+
+    font-size: 16px;
+    font-weight: 750;
+
+    line-height: 1.35;
+}
+
+
+.notification-copy > span {
+    color: var(--app-text-secondary);
+
+    font-size: 16px;
+    line-height: 1.55;
+}
+
+
+.notification-copy small {
+    /* color: var(--app-text-muted); */
+    color: red;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+
+/* Day-off badge */
+
+.notification-badge {
+    align-self: center;
+
+    flex-shrink: 0;
+
+    padding: 6px 9px;
+
+    border-radius: 999px;
+
+    background: rgba(245, 158, 11, 0.14);
+
+    border: 1px solid rgba(245, 158, 11, 0.28);
+
+    color: #f59e0b;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 0.04em;
+}
+
+
+/* ============================================================
+   EMPTY NOTIFICATION STATE
+   ============================================================ */
+
+.notification-empty {
+    margin: 16px 18px 18px;
+
+    padding: 40px 20px;
+
+    border: 1px dashed var(--app-border);
+
+    border-radius: 12px;
+
+    background: var(--app-surface-secondary);
+
+    text-align: center;
+}
+
+.notification-empty span {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-size: 25px;
+}
+
+.notification-empty p {
+    margin: 0;
+
+    color: var(--app-text-secondary);
+
+    font-size: 13px;
+}
+
+
+/* ============================================================
+   DARK MODE — PROFESSIONAL DASHBOARD
+   ============================================================ */
+
+[data-theme="dark"] .business-dashboard-page {
+    background:
+        radial-gradient(
+            circle at 15% 0%,
+            rgba(37, 99, 235, 0.10),
+            transparent 30%
+        ),
+        #0b1220;
+}
+
+
+/* Cards */
+
+[data-theme="dark"] .business-stat-card,
+[data-theme="dark"] .business-panel,
+[data-theme="dark"] .business-table-card,
+[data-theme="dark"] .business-notifications-panel {
+    background: #101827;
+
+    border-color: #26344a;
+
+    box-shadow:
+        0 8px 28px rgba(0, 0, 0, 0.16);
+}
+
+
+[data-theme="dark"] .business-stat-card:hover {
+    border-color: #3b82f6;
+
+    box-shadow:
+        0 12px 32px rgba(0, 0, 0, 0.22);
+}
+
+
+/* Summary tiles */
+
+[data-theme="dark"] .payment-overview-grid > div,
+[data-theme="dark"] .vehicle-summary-list > div {
+    background: #1a2638;
+
+    border-color: #2a3a52;
+}
+
+
+/* Notifications */
+
+[data-theme="dark"] .business-notification-item {
+    background: #131d2d;
+
+    border-color: #2a3a52;
+}
+
+
+[data-theme="dark"] .business-notification-item:hover {
+    background: #182438;
+
+    border-color: #3b82f6;
+}
+
+
+[data-theme="dark"] .business-notification-item::before {
+    background: #60a5fa;
+}
+
+
+[data-theme="dark"] .notification-dot {
+    background: #60a5fa;
+
+    box-shadow:
+        0 0 0 4px rgba(96, 165, 250, 0.10);
+}
+
+
+[data-theme="dark"] .notification-copy strong {
+    color: #f8fafc;
+}
+
+
+[data-theme="dark"] .notification-copy > span {
+    color: #a8b6ca;
+}
+
+
+[data-theme="dark"] .notification-copy small {
+    color: #718096;
+}
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+[data-theme="dark"] .business-dashboard-footer {
+    border-top-color: #26344a;
+}
+
+[data-theme="dark"] .business-footer-brand strong {
+    color: #60a5fa;
+}
+
+[data-theme="dark"] .business-footer-brand span,
+[data-theme="dark"] .business-footer-meta {
+    color: #718096;
+}
+
+
+/* ============================================================
+   RESPONSIVE ALERTS
+   ============================================================ */
+
+@media (max-width: 600px) {
+
+    .business-notification-item {
+        padding: 14px;
+    }
+
+    .notification-badge {
+        align-self: flex-start;
+    }
+
+}
+
+/* ============================================================
+   LANDING PAGE — MOBILE HEADER FIX
+   ============================================================ */
+
+@media (max-width: 700px) {
+
+    /* Keep the navbar inside the viewport */
+    .landing-header,
+    .landing-navbar,
+    .navbar,
+    .site-header {
+        width: 100%;
+        box-sizing: border-box;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+
+    /* Main header row */
+    .landing-header-content,
+    .landing-nav,
+    .navbar-inner,
+    .site-header-inner {
+        width: 100%;
+        max-width: none;
+
+        display: flex;
+        align-items: center;
+
+        gap: 8px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* Logo */
+    .landing-logo,
+    .navbar-logo,
+    .site-logo {
+        flex-shrink: 1;
+        min-width: 0;
+    }
+
+
+    /* Don't allow the logo to consume all available space */
+    .landing-logo span,
+    .navbar-logo span,
+    .site-logo span {
+        white-space: nowrap;
+    }
+
+
+    /* Navigation controls */
+    .landing-nav-actions,
+    .navbar-actions,
+    .header-actions,
+    .nav-actions {
+        display: flex;
+
+        align-items: center;
+
+        gap: 6px;
+
+        margin-left: auto;
+
+        flex-shrink: 0;
+    }
+
+
+    /* All header buttons */
+    .landing-nav-actions button,
+    .landing-nav-actions a,
+    .navbar-actions button,
+    .navbar-actions a,
+    .header-actions button,
+    .header-actions a,
+    .nav-actions button,
+    .nav-actions a {
+        white-space: nowrap;
+
+        box-sizing: border-box;
+    }
+
+
+    /* Driver Login MUST remain visible */
+    .driver-login,
+    .driver-login-button,
+    .nav-driver-login,
+    .driver-login-link {
+        display: inline-flex !important;
+
+        align-items: center;
+        justify-content: center;
+
+        flex-shrink: 1;
+
+        padding: 8px 10px;
+
+        font-size: 12px;
+    }
+
+
+    /* Business Login */
+    .business-login,
+    .business-login-button,
+    .nav-business-login,
+    .business-login-link {
+        display: inline-flex !important;
+
+        align-items: center;
+        justify-content: center;
+
+        flex-shrink: 1;
+
+        padding: 8px 11px;
+
+        font-size: 12px;
+    }
+
+
+    /* Dark mode button */
+    .theme-toggle,
+    .dark-toggle,
+    .theme-button {
+        flex-shrink: 0;
+
+        width: 38px;
+        min-width: 38px;
+
+        padding: 8px;
+    }
+
+}
+
+/* ============================================================
+   DASHBOARD VEHICLE STATUS — FINAL THEME RULES
+   ============================================================ */
+
+.business-dashboard-page .vehicle-today-status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 105px;
+    min-height: 34px;
+
+    padding: 7px 13px;
+    box-sizing: border-box;
+
+    border-radius: 999px;
+
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    border: 1px solid transparent;
+}
+
+
+/* ------------------------------------------------------------
+   LIGHT THEME
+   ------------------------------------------------------------ */
+
+html:not([data-theme="dark"])
+.business-dashboard-page
+.vehicle-today-status.in-progress,
+[data-theme="light"]
+.business-dashboard-page
+.vehicle-today-status.in-progress {
+    background: #eff6ff !important;
+    border-color: #93c5fd !important;
+    color: #1d4ed8 !important;
+}
+
+html:not([data-theme="dark"])
+.business-dashboard-page
+.vehicle-today-status.completed,
+[data-theme="light"]
+.business-dashboard-page
+.vehicle-today-status.completed {
+    background: #eff6ff !important;
+    border-color: #93c5fd !important;
+    color: #1d4ed8 !important;
+}
+
+html:not([data-theme="dark"])
+.business-dashboard-page
+.vehicle-today-status.not-started,
+[data-theme="light"]
+.business-dashboard-page
+.vehicle-today-status.not-started {
+    background: #fffbeb !important;
+    border-color: #fcd34d !important;
+    color: #b45309 !important;
+}
+
+html:not([data-theme="dark"])
+.business-dashboard-page
+.vehicle-today-status.day-off,
+[data-theme="light"]
+.business-dashboard-page
+.vehicle-today-status.day-off {
+    background: #fff7ed !important;
+    border-color: #fdba74 !important;
+    color: #c2410c !important;
+}
+
+
+/* ------------------------------------------------------------
+   DARK THEME
+   ------------------------------------------------------------ */
+
+[data-theme="dark"]
+.business-dashboard-page
+.vehicle-today-status.in-progress {
+    background: #172554 !important;
+    border-color: #2563eb !important;
+    color: #93c5fd !important;
+}
+
+[data-theme="dark"]
+.business-dashboard-page
+.vehicle-today-status.completed {
+    background: #172554 !important;
+    border-color: #2563eb !important;
+    color: #93c5fd !important;
+}
+
+[data-theme="dark"]
+.business-dashboard-page
+.vehicle-today-status.not-started {
+    background: #3f2d08 !important;
+    border-color: #92400e !important;
+    color: #fbbf24 !important;
+}
+
+[data-theme="dark"]
+.business-dashboard-page
+.vehicle-today-status.day-off {
+    background: #431407 !important;
+    border-color: #c2410c !important;
+    color: #fdba74 !important;
+}
+
+/* ============================================================
+   ALERT — DAY OFF BADGE
+   ============================================================ */
+
+.business-dashboard-page .notification-badge {
+    align-self: center;
+    flex-shrink: 0;
+
+    padding: 6px 10px;
+
+    border-radius: 999px;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+
+    background: #fff7ed !important;
+    border: 1px solid #fdba74 !important;
+    color: #c2410c !important;
+}
+
+
+/* Dark theme */
+
+[data-theme="dark"]
+.business-dashboard-page
+.notification-badge {
+    background: rgba(245, 158, 11, 0.16) !important;
+    border-color: rgba(245, 158, 11, 0.50) !important;
+    color: #fbbf24 !important;
+
+    box-shadow:
+        0 0 0 1px rgba(245, 158, 11, 0.04);
+}

@@ -1,0 +1,973 @@
+.business-payment-page {
+    min-height: 100vh;
+    background: #f7f8fa;
+    color: #172033;
+    padding: 40px 48px;
+}
+
+.business-payment-header,
+.business-payment-summary,
+.business-payment-toolbar,
+.business-payment-list-card,
+.business-payment-error,
+.business-payment-success {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.business-payment-header {
+    margin-bottom: 30px;
+}
+
+.business-payment-back {
+    border: none;
+    background: transparent;
+    padding: 0;
+    margin-bottom: 18px;
+    color: #64748b;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.business-payment-back:hover {
+    color: #172033;
+}
+
+.business-payment-eyebrow {
+    margin: 0 0 7px;
+    color: #64748b;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .14em;
+}
+
+.business-payment-header h1 {
+    margin: 0;
+    font-size: 40px;
+}
+
+.business-payment-subtitle {
+    margin: 8px 0 0;
+    color: #64748b;
+    font-size: 16px;
+}
+
+.business-payment-error,
+.business-payment-success {
+    margin-bottom: 18px;
+    padding: 14px 16px;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.business-payment-error {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #b91c1c;
+}
+
+.business-payment-success {
+    background: #ecfdf3;
+    border: 1px solid #bbf7d0;
+    color: #166534;
+}
+
+/* SUMMARY */
+
+.business-payment-summary {
+    margin-bottom: 22px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.business-payment-summary > div {
+    min-height: 110px;
+    padding: 22px;
+    border: 1px solid #e5e9ef;
+    border-radius: 12px;
+    background: #fff;
+}
+
+.business-payment-summary span {
+    display: block;
+    color: #64748b;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.business-payment-summary strong {
+    display: block;
+    margin-top: 9px;
+    font-size: 28px;
+}
+
+.payment-paid {
+    color: #15803d !important;
+}
+
+.payment-pending {
+    color: #b45309 !important;
+}
+
+.payment-cash {
+    color: #1d4ed8 !important;
+}
+
+/* TOOLBAR */
+
+.business-payment-toolbar {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.business-payment-search {
+    flex: 1;
+    max-width: 700px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 14px;
+    border: 1px solid #dfe4ea;
+    border-radius: 9px;
+    background: #fff;
+}
+
+.business-payment-search:focus-within {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37,99,235,.07);
+}
+
+.business-payment-search input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #172033;
+    font-size: 14px;
+}
+
+.business-payment-toolbar select {
+    height: 46px;
+    padding: 0 13px;
+    border: 1px solid #dfe4ea;
+    border-radius: 8px;
+    background: #fff;
+    color: #334155;
+    font-size: 13px;
+}
+
+/* LIST */
+
+.business-payment-list-card {
+    overflow: hidden;
+    border: 1px solid #e5e9ef;
+    border-radius: 13px;
+    background: #fff;
+}
+
+.business-payment-list-heading {
+    padding: 24px 26px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #edf0f4;
+}
+
+.business-payment-list-heading p {
+    margin: 0 0 5px;
+    color: #64748b;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .12em;
+}
+
+.business-payment-list-heading h2 {
+    margin: 0;
+    font-size: 23px;
+}
+
+.business-payment-list-heading > span {
+    color: #64748b;
+    font-size: 13px;
+}
+
+.business-payment-table-wrapper {
+    overflow-x: auto;
+}
+
+.business-payment-table {
+    width: 100%;
+    min-width: 1050px;
+    border-collapse: collapse;
+}
+
+.business-payment-table th {
+    padding: 15px 18px;
+    border-bottom: 1px solid #edf0f4;
+    background: #fafbfc;
+    color: #64748b;
+    text-align: left;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+}
+
+.business-payment-table td {
+    padding: 18px;
+    border-bottom: 1px solid #f0f2f5;
+    color: #475569;
+    font-size: 13px;
+}
+
+.business-payment-table td strong {
+    color: #172033;
+}
+
+.business-payment-table td small {
+    display: block;
+    margin-top: 4px;
+    color: #94a3b8;
+}
+
+.payment-table-paid {
+    color: #15803d !important;
+}
+
+.payment-table-remaining {
+    color: #b45309 !important;
+}
+
+.business-payment-status {
+    display: inline-flex;
+    white-space: nowrap;
+    padding: 6px 9px;
+    border-radius: 999px;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.business-payment-status.paid {
+    background: #ecfdf3;
+    color: #15803d;
+}
+
+.business-payment-status.pending,
+.business-payment-status.partial {
+    background: #fffbeb;
+    color: #b45309;
+}
+
+.business-payment-status.cash-pending {
+    background: #eff6ff;
+    color: #1d4ed8;
+}
+
+.business-payment-view-button {
+    padding: 8px 12px;
+    border: 1px solid #dfe4ea;
+    border-radius: 7px;
+    background: #fff;
+    color: #334155;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.business-payment-view-button:hover {
+    background: #f8fafc;
+}
+
+/* EMPTY */
+
+.business-payment-empty {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.business-payment-empty > div {
+    width: 44px;
+    height: 44px;
+    margin: 0 auto;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #eff6ff;
+    color: #2563eb;
+    font-weight: 800;
+}
+
+.business-payment-empty h3 {
+    margin: 14px 0 6px;
+    font-size: 20px;
+}
+
+.business-payment-empty p {
+    margin: 0;
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* MODAL */
+
+.business-payment-modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: rgba(15,23,42,.55);
+}
+
+.business-payment-modal {
+    width: min(760px, 100%);
+    max-height: 92vh;
+    overflow-y: auto;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 24px 70px rgba(15,23,42,.25);
+}
+
+.business-payment-modal-header {
+    padding: 22px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid #edf0f4;
+}
+
+.business-payment-modal-header p {
+    margin: 0 0 5px;
+    color: #64748b;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .12em;
+}
+
+.business-payment-modal-header h2 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.business-payment-close {
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 8px;
+    background: #f8fafc;
+    color: #64748b;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.business-payment-details {
+    padding: 22px 24px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    gap: 1px;
+    background: #edf0f4;
+}
+
+.business-payment-details > div {
+    padding: 15px;
+    background: #fff;
+}
+
+.business-payment-details span {
+    display: block;
+    color: #64748b;
+    font-size: 11px;
+}
+
+.business-payment-details strong {
+    display: block;
+    margin-top: 5px;
+    color: #172033;
+    font-size: 14px;
+}
+
+.business-payment-transactions {
+    padding: 22px 24px;
+}
+
+.business-payment-transactions-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.business-payment-transactions-header h3 {
+    margin: 0;
+    font-size: 17px;
+}
+
+.business-payment-transactions-header span {
+    color: #64748b;
+    font-size: 12px;
+}
+
+.business-payment-no-transactions {
+    padding: 18px;
+    border: 1px solid #edf0f4;
+    border-radius: 9px;
+    color: #64748b;
+    text-align: center;
+    font-size: 13px;
+}
+
+.business-payment-transaction-list {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.business-payment-transaction {
+    padding: 13px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+    border: 1px solid #e8ecf1;
+    border-radius: 9px;
+}
+
+.business-payment-transaction > div:first-child strong {
+    display: block;
+    color: #172033;
+}
+
+.business-payment-transaction > div:first-child span {
+    display: block;
+    margin-top: 3px;
+    color: #64748b;
+    font-size: 11px;
+}
+
+.business-payment-transaction > strong {
+    color: #172033;
+}
+
+.business-payment-transaction-actions {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 8px;
+}
+
+.confirm-cash-button,
+.reject-cash-button {
+    padding: 8px 11px;
+    border-radius: 7px;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.confirm-cash-button {
+    border: 1px solid #bbf7d0;
+    background: #ecfdf3;
+    color: #15803d;
+}
+
+.reject-cash-button {
+    border: 1px solid #fecaca;
+    background: #fef2f2;
+    color: #b91c1c;
+}
+
+.business-payment-modal-footer {
+    padding: 0 24px 22px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.business-payment-modal-footer button {
+    padding: 10px 16px;
+    border: 1px solid #dfe4ea;
+    border-radius: 8px;
+    background: #fff;
+    color: #334155;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.business-payment-loading {
+    min-height: 70vh;
+    display: grid;
+    place-items: center;
+    color: #64748b;
+}
+
+@media (max-width: 900px) {
+
+    .business-payment-page {
+        padding: 30px 24px;
+    }
+
+    .business-payment-summary {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .business-payment-page {
+        padding: 22px 14px;
+    }
+
+    .business-payment-header h1 {
+        font-size: 32px;
+    }
+
+    .business-payment-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .business-payment-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .business-payment-search {
+        max-width: none;
+    }
+
+    .business-payment-details {
+        grid-template-columns: 1fr;
+    }
+
+    .business-payment-transaction-actions {
+        flex-direction: column;
+    }
+
+    .confirm-cash-button,
+    .reject-cash-button {
+        width: 100%;
+    }
+
+}
+
+/* ============================================================
+   THEME SUPPORT
+   ============================================================ */
+
+.business-payment-page {
+    background: var(--app-background);
+    color: var(--app-text);
+}
+
+
+/* HEADER */
+
+.business-payment-back {
+    color: var(--app-text-secondary);
+}
+
+.business-payment-back:hover {
+    color: var(--app-text);
+}
+
+.business-payment-eyebrow {
+    color: var(--app-text-secondary);
+}
+
+.business-payment-header h1 {
+    color: var(--app-text);
+}
+
+.business-payment-subtitle {
+    color: var(--app-text-secondary);
+}
+
+
+/* ============================================================
+   SUMMARY CARDS
+   ============================================================ */
+
+.business-payment-summary > div {
+    background: var(--app-surface);
+    border-color: var(--app-border);
+}
+
+.business-payment-summary span {
+    color: var(--app-text-secondary);
+}
+
+
+/* ============================================================
+   SEARCH
+   ============================================================ */
+
+.business-payment-search {
+    background: var(--app-surface);
+    border-color: var(--app-border);
+}
+
+.business-payment-search input {
+    color: var(--app-text);
+}
+
+.business-payment-search input::placeholder {
+    color: var(--app-text-muted);
+}
+
+
+/* FILTER */
+
+.business-payment-toolbar select {
+    background: var(--app-surface);
+    border-color: var(--app-border);
+    color: var(--app-text);
+}
+
+.business-payment-toolbar select option {
+    background: var(--app-surface);
+    color: var(--app-text);
+}
+
+
+/* ============================================================
+   PAYMENT LIST
+   ============================================================ */
+
+.business-payment-list-card {
+    background: var(--app-surface);
+    border-color: var(--app-border);
+}
+
+.business-payment-list-heading {
+    border-bottom-color: var(--app-border);
+}
+
+.business-payment-list-heading p {
+    color: var(--app-text-secondary);
+}
+
+.business-payment-list-heading h2 {
+    color: var(--app-text);
+}
+
+.business-payment-list-heading > span {
+    color: var(--app-text-secondary);
+}
+
+
+/* ============================================================
+   PAYMENT TABLE
+   ============================================================ */
+
+.business-payment-table th {
+    background: var(--app-surface-secondary);
+    border-bottom-color: var(--app-border);
+    color: var(--app-text-secondary);
+}
+
+.business-payment-table td {
+    background: var(--app-surface);
+    border-bottom-color: var(--app-border);
+    color: var(--app-text-secondary);
+}
+
+.business-payment-table td strong {
+    color: var(--app-text);
+}
+
+.business-payment-table td small {
+    color: var(--app-text-muted);
+}
+
+
+/* ============================================================
+   PAYMENT STATUS
+   ============================================================ */
+
+[data-theme="dark"] .business-payment-status.paid {
+    background: rgba(34, 197, 94, 0.15);
+    color: #86efac;
+    border: 1px solid rgba(34, 197, 94, 0.25);
+}
+
+[data-theme="dark"] .business-payment-status.pending,
+[data-theme="dark"] .business-payment-status.partial {
+    background: rgba(245, 158, 11, 0.15);
+    color: #fcd34d;
+    border: 1px solid rgba(245, 158, 11, 0.25);
+}
+
+[data-theme="dark"] .business-payment-status.cash-pending {
+    background: rgba(59, 130, 246, 0.15);
+    color: #93c5fd;
+    border: 1px solid rgba(59, 130, 246, 0.25);
+}
+
+
+/* ============================================================
+   TABLE BUTTON
+   ============================================================ */
+
+.business-payment-view-button {
+    background: var(--app-surface-secondary);
+    border-color: var(--app-border);
+    color: var(--app-text);
+}
+
+.business-payment-view-button:hover {
+    background: color-mix(
+        in srgb,
+        var(--app-primary) 10%,
+        var(--app-surface)
+    );
+    border-color: var(--app-primary);
+    color: var(--app-primary);
+}
+
+
+/* ============================================================
+   EMPTY STATE
+   ============================================================ */
+
+.business-payment-empty h3 {
+    color: var(--app-text);
+}
+
+.business-payment-empty p {
+    color: var(--app-text-secondary);
+}
+
+
+/* ============================================================
+   MODAL
+   ============================================================ */
+
+.business-payment-modal {
+    background: var(--app-surface);
+}
+
+.business-payment-modal-header {
+    border-bottom-color: var(--app-border);
+}
+
+.business-payment-modal-header p {
+    color: var(--app-text-secondary);
+}
+
+.business-payment-modal-header h2 {
+    color: var(--app-text);
+}
+
+.business-payment-close {
+    background: var(--app-surface-secondary);
+    color: var(--app-text-secondary);
+}
+
+
+/* ============================================================
+   PAYMENT DETAILS
+   ============================================================ */
+
+.business-payment-details {
+    background: var(--app-border);
+}
+
+.business-payment-details > div {
+    background: var(--app-surface);
+}
+
+.business-payment-details span {
+    color: var(--app-text-secondary);
+}
+
+.business-payment-details strong {
+    color: var(--app-text);
+}
+
+
+/* ============================================================
+   TRANSACTIONS
+   ============================================================ */
+
+.business-payment-transactions-header h3 {
+    color: var(--app-text);
+}
+
+.business-payment-transactions-header span {
+    color: var(--app-text-secondary);
+}
+
+.business-payment-no-transactions {
+    border-color: var(--app-border);
+    color: var(--app-text-secondary);
+}
+
+.business-payment-transaction {
+    background: var(--app-surface);
+    border-color: var(--app-border);
+}
+
+.business-payment-transaction > div:first-child strong {
+    color: var(--app-text);
+}
+
+.business-payment-transaction > div:first-child span {
+    color: var(--app-text-secondary);
+}
+
+.business-payment-transaction > strong {
+    color: var(--app-text);
+}
+
+
+/* ============================================================
+   MODAL FOOTER
+   ============================================================ */
+
+.business-payment-modal-footer button {
+    background: var(--app-surface-secondary);
+    border-color: var(--app-border);
+    color: var(--app-text);
+}
+
+.business-payment-modal-footer button:hover {
+    background: color-mix(
+        in srgb,
+        var(--app-primary) 10%,
+        var(--app-surface)
+    );
+}
+
+
+/* ============================================================
+   LOADING
+   ============================================================ */
+
+.business-payment-loading {
+    color: var(--app-text-secondary);
+}
+
+
+/* ============================================================
+   DARK MODE SUMMARY COLORS
+   ============================================================ */
+
+[data-theme="dark"] .payment-paid,
+[data-theme="dark"] .payment-table-paid {
+    color: #86efac !important;
+}
+
+[data-theme="dark"] .payment-pending,
+[data-theme="dark"] .payment-table-remaining {
+    color: #fcd34d !important;
+}
+
+[data-theme="dark"] .payment-cash {
+    color: #93c5fd !important;
+}
+
+
+/* ============================================================
+   DARK MODE ALERTS
+   ============================================================ */
+
+[data-theme="dark"] .business-payment-error {
+    background: rgba(239, 68, 68, 0.12);
+    border-color: rgba(248, 113, 113, 0.3);
+    color: #fca5a5;
+}
+
+[data-theme="dark"] .business-payment-success {
+    background: rgba(34, 197, 94, 0.12);
+    border-color: rgba(74, 222, 128, 0.25);
+    color: #86efac;
+}
+
+
+/* ============================================================
+   DARK MODE CASH ACTIONS
+   ============================================================ */
+
+[data-theme="dark"] .confirm-cash-button {
+    background: rgba(34, 197, 94, 0.12);
+    border-color: rgba(74, 222, 128, 0.25);
+    color: #86efac;
+}
+
+[data-theme="dark"] .reject-cash-button {
+    background: rgba(239, 68, 68, 0.12);
+    border-color: rgba(248, 113, 113, 0.3);
+    color: #fca5a5;
+}
+
+/* ============================================================
+   PAYMENT ACTIONS
+   ============================================================ */
+
+.business-payment-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+
+/* ============================================================
+   CALL DRIVER
+   ============================================================ */
+
+.business-payment-call-button {
+    border: 1px solid rgba(37, 99, 235, 0.35);
+
+    background: rgba(37, 99, 235, 0.10);
+
+    color: #60a5fa;
+
+    padding: 7px 11px;
+
+    border-radius: 7px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition:
+        background 0.18s ease,
+        border-color 0.18s ease,
+        transform 0.18s ease;
+}
+
+.business-payment-call-button:hover {
+    background: rgba(37, 99, 235, 0.18);
+
+    border-color: rgba(37, 99, 235, 0.55);
+
+    transform: translateY(-1px);
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 700px) {
+
+    .business-payment-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .business-payment-actions button {
+        width: 100%;
+    }
+
+}
